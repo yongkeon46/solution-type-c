@@ -38,7 +38,7 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
-		System.out.println(randomNumber);
+		
 		try {
 			if(answer>=1 &&answer<=100) {
 				if(randomNumber>answer) {
