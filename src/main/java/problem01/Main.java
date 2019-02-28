@@ -30,7 +30,6 @@ public class Main {
 		
 			System.out.println("");
 		}
-		
 		// 키보드 닫기
 		scanner.close();
 		
@@ -39,6 +38,32 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
-		return true;
-	}
+		System.out.println(randomNumber);
+		try {
+			if(answer>=1 &&answer<=100) {
+				if(randomNumber>answer) {
+					min=answer;
+					count++;
+					
+				}else if(randomNumber<answer) {
+					max=answer;
+					count++;
+					
+				}else {
+					return true;
+				}
+				
+			}else {
+				System.out.println("0~100까지 정수만 입력하세요");
+				count++;
+			}
+			
+		}catch(Exception e) {
+			System.out.println("0~100까지 정수만 입력하세요");
+			count--;
+		}
+		return false;
+		
+		
+		}
 }
